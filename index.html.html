@@ -3,12 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <script>
-  // Pega o hash com o token e redireciona para o app
-  var hash = window.location.hash;
-  var search = window.location.search;
-  var extra = hash || search || '';
-  window.location.replace('https://darionicolaslanata.github.io/finan-asos/' + extra);
+  function redirect() {
+    var hash = window.location.hash;
+    var search = window.location.search;
+    var extra = hash || search || '';
+    if (extra) {
+      window.location.replace('https://darionicolaslanata.github.io/finan-asos/' + extra);
+    } else {
+      window.location.replace('https://darionicolaslanata.github.io/finan-asos/');
+    }
+  }
+  redirect();
 </script>
 </head>
-<body></body>
+<body>
+<p>Redirecionando...</p>
+</body>
 </html>
